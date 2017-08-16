@@ -26,7 +26,7 @@ Q = $(if $(filter 1,$(VERBOSE)),,@)
 M = $(shell printf "\033[34;1m▶\033[0m")
 
 # debug flag
-ifdef DEBUG
+ifeq ($(DEBUG), 1)
 DEBUGFLAGS ?= -gcflags="-N -l"
 endif
 
